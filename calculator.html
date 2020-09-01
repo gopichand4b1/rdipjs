@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>CALCULATOR</title>
+<style type="text/css">
+input[type=text]{
+background-color:black;
+color:#b8ffb8;
+width:100%;
+height:100px;
+font-size:40px;
+}
+input[type=button]{
+background-color:black;
+color:#b8ffb8;
+width:150px;
+height:100px;
+font-size:40px;
+}
+</style>
+</head>
+<body>
+<table border="1">
+<tr>
+<td colspan="3"><input type="text" id="result"/></td>
+<td><input type="button" value="C" onclick="clr( )"/></td>
+</tr>
+<tr>
+<td><input type="button"  value="1" onclick="this('1')"/></td>
+<td><input type="button"  value="2" onclick="this('2')"/></td>
+<td><input type="button"  value="3" onclick="this('3')"/></td>
+<td><input type="button"  value="/" onclick="this('/')"/></td>
+</tr>
+<tr>
+<td><input type="button"  value="4" onclick="this('4')"/></td>
+<td><input type="button"  value="5" onclick="this('5')"/></td>
+<td><input type="button" value="6" onclick="this('6')"/></td>
+<td><input type="button" value="-" onclick="this('-')"/></td>
+</tr>
+<tr>
+<td><input type="button"  value="7" onclick="this('7')"/></td>
+<td><input type="button"  value="8" onclick="this('8')"/></td>
+<td><input type="button"  value="9" onclick="this('9')"/></td>
+<td><input type="button"  value="+" onclick="this('+')"/></td>
+</tr>
+<tr>
+<td><input type="button"  value="." onclick="this('.')"/></td>
+<td><input type="button"  value="0" onclick="this('0')"/></td>
+<td><input type="button"  value="=" onclick="solve( )"/></td>
+<td><input type="button"  value="*" onclick="this('*')"/></td>
+</tr>
+</table>
+<script>
+function this(val)
+{
+document.getElementById("result").value+=val
+}
+function solve( )
+{
+Let a=document.getElementById("result").value
+Let b=eval(a)
+document.getElementById("result").value=b
+}
+function clr( )
+{
+document.getElementById("result").value=""
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>
+Form Validation using JS
+</title>
+<script>
+function vf( ){
+var email1=document.myform.email2.value;
+var atposition=email1.indexOf("@");
+var dotposition=email1.lastIndexOf(".");
+if(atposition<1 || dotposition<atposition+2 || dotposition+2>=email1.length){
+}
+}
+</script>
+</head>
+<body>
+<form name="fname" onsubmit="return vf( )" method="post">
+<label>NAME:</label>
+<input type="text" name="fname"/></br></br>
+<label>Phone Number</label>
+<input type="number"></br></br>
+<label>Email</label>
+<input type="name" name="email1"/>
+</br></br>
+<input type="submit" value="Submit"/>
+</body>
+</html>
